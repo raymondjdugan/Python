@@ -6,14 +6,19 @@
 # HINT 2: https://www.kite.com/python/answers/how-to-limit-a-float-to-two-decimal-places-in-python
 print("Welcome to the Tip Calculator\n")
 
+# Getting the bill amount, tip amount and the number of the party
 bill = input("What was your final bill?\n")
 tip = input("How much would you like to give? 10, 12, or 15\n")
 ppl = input("How many people will split the bill?\n")
 
-billAsInt = float(bill)
-tipAsInt = float(tip) / 100 + 1
+# Converting string to float and int
+billAsFloat = float(bill)
+tipAsFloat = float(tip) / 100 + 1
 pplAsInt = int(ppl)
 
-finalBill = round((billAsInt / pplAsInt) * tipAsInt, 2)
+# Calculating the final bill
+finalBill = round((billAsFloat / pplAsInt) * tipAsFloat, 2)
+
+# Constructing and printing the final bill mesage
 message = f"Each person should pay ${float(finalBill)}."
 print(message)
