@@ -6,6 +6,6 @@ names = names_string.split(", ")
 # 🚨 Don't change the code above 👆
 
 # Write your code below this line 👇
-randomNum = random.randint(0, len(names))
+randomNum = random.randint(0, len(names) - 1)
 print(f"{names[randomNum]} is the person paying tonight.")
 
