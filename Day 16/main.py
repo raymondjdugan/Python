@@ -9,7 +9,8 @@ menu = Menu()
 is_on = True
 
 while is_on:
-    order = input(print("What would you like? (espresso/latte/cappuccino):")).lower()
+    options = menu.get_items()
+    order = input(print(f"What would you like? ({options}):")).lower()
     if order == "off":
         is_on = False
     elif order == "report":
