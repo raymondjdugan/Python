@@ -36,7 +36,7 @@ machine_on = True
 machine_money = 0
 
 while machine_on:
-    answer = input(print("What would you like? (espresso/latte/cappuccino):")).lower()
+    answer = input("What would you like? (espresso/latte/cappuccino):").lower()
 
     if answer == "off":
         machine_on = False
