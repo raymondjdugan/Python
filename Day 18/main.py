@@ -29,14 +29,20 @@ screen.colormode(255)
 #     create_shape(shape_side_n)
 
 
-directions = [0, 90, 180, 270]
-timmy_the_turtle.pensize(15)
-timmy_the_turtle.speed("fastest")
+# directions = [0, 90, 180, 270]
+# timmy_the_turtle.pensize(15)
+# timmy_the_turtle.speed("fastest")
 
-for _ in range(200):
-    timmy_the_turtle.color(random.randint(
-        0, 255), random.randint(0, 255), random.randint(0, 255))
-    timmy_the_turtle.forward(30)
-    timmy_the_turtle.setheading(random.choice(directions))
+# for _ in range(200):
+#     timmy_the_turtle.color(random.randint(
+#         0, 255), random.randint(0, 255), random.randint(0, 255))
+#     timmy_the_turtle.forward(30)
+#     timmy_the_turtle.setheading(random.choice(directions))
+timmy_the_turtle.speed("fastest")
+for x in range(1, 360, 6):
+    timmy_the_turtle.pencolor(random.randint(
+        1, 255), random.randint(1, 255), random.randint(1, 255))
+    timmy_the_turtle.seth(x)
+    timmy_the_turtle.circle(100)
 
 screen.exitonclick()
