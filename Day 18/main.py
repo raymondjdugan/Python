@@ -38,11 +38,14 @@ screen.colormode(255)
 #         0, 255), random.randint(0, 255), random.randint(0, 255))
 #     timmy_the_turtle.forward(30)
 #     timmy_the_turtle.setheading(random.choice(directions))
-timmy_the_turtle.speed("fastest")
-for x in range(1, 360, 6):
-    timmy_the_turtle.pencolor(random.randint(
-        1, 255), random.randint(1, 255), random.randint(1, 255))
-    timmy_the_turtle.seth(x)
-    timmy_the_turtle.circle(100)
+
+
+# timmy_the_turtle.speed("fastest")
+# for x in range(1, 360, 6):
+#     timmy_the_turtle.pencolor(random.randint(
+#         1, 255), random.randint(1, 255), random.randint(1, 255))
+#     timmy_the_turtle.seth(x)
+#     timmy_the_turtle.circle(100)
+
 
 screen.exitonclick()
