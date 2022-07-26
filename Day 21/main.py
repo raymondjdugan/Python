@@ -1,6 +1,7 @@
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 Y_COR_COLLISION = 280
@@ -17,6 +18,7 @@ screen.tracer(0)
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 ball = Ball()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(r_paddle.up, "Up")
@@ -40,10 +42,14 @@ while game_is_on:
             or ball.distance(l_paddle) < X_PADDLE_DISTANCE and ball.xcor() < -X_COR_COLLISION:
         ball.bounce_x()
 
+    # Events of right paddle missing ball hit
     if ball.xcor() > SCREEN_LIMIT:
         ball.reset_position()
+        scoreboard.l_point()
 
+    # Events of left paddle missing ball hit
     if ball.xcor() < -SCREEN_LIMIT:
         ball.reset_position()
+        scoreboard.r_point()
 
 screen.exitonclick()
