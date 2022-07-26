@@ -2,6 +2,7 @@ from turtle import Turtle
 
 STRETCH_WIDTH = 5
 STRETCH_HEIGHT = 1
+MOVE_LIMIT = 20
 
 
 class Paddle(Turtle):
@@ -15,10 +16,10 @@ class Paddle(Turtle):
         self.goto(position)
 
     def up(self):
-        new_y = self.ycor() + 20
+        new_y = self.ycor() + MOVE_LIMIT
         self.goto(self.xcor(), new_y)
 
     def down(self):
-        new_y = self.ycor() - 20
+        new_y = self.ycor() - MOVE_LIMIT
         self.goto(self.xcor(), new_y)
 
