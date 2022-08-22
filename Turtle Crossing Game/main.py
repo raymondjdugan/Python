@@ -1,6 +1,7 @@
 from turtle import Screen
 import time
 from player import Player
+from car_manager import CarManager
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -9,15 +10,28 @@ screen.title("Raymond's Turtle Crossing Game")
 screen.tracer(0)
 
 player = Player()
+car_manager = CarManager()
 
 screen.listen()
 screen.onkey(player.up, "Up")
 screen.onkey(player.down, "Down")
 
-
 game_is_on = True
 while game_is_on:
-    screen.update()
     time.sleep(0.1)
+    screen.update()
+
+    car_manager.create_car()
+    car_manager.move_cars()
+
+    # Detect collision with car
+    for car in car_manager.all_cars:
+        if car.distance(player) < 20:
+            game_is_on = False
+
+    # Detect next level
+    if player.is_at_finish_line():
+        player.go_to_start()
+
 
 screen.exitonclick()
