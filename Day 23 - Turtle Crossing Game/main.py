@@ -7,7 +7,7 @@ import time
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("white")
-screen.title("Raymond's Turtle Crossing Game")
+screen.title("Raymond's Day 23 - Turtle Crossing Game")
 screen.tracer(0)
 
 player = Player()
