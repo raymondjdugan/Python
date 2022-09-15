@@ -17,13 +17,28 @@
 # upper_names = [name.upper() for name in names if len(name) > 5]
 # print(upper_names)
 
+
+# Square Numbers Challenge
 numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 # 🚨 Do Not Change the code above 👆
 
 #Write your 1 line code 👇 below:
-squared_numbers = [pow(num, 2) for num in numbers]
+squared_numbers = [num**2 for num in numbers]
+
 
 
 #Write your code 👆 above:
 
 print(squared_numbers)
+
+# Challenge 3
+# with open("file1.txt") as file1:
+#     file_one_nums = file1.readlines()
+# with open("file2.txt") as file2:
+#     file_two_nums = file2.readlines()
+#
+# result = [int(num) for num in file_one_nums if num in file_two_nums]
+#
+# # Write your code above 👆
+#
+# print(result)
