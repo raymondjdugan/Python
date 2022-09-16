@@ -45,12 +45,20 @@
 
 # Dictionary Comprehension
 # new_dict = {new_key:new_value for (key,value) in dict.items()}
-import random
+# import random
+#
+# names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+# scores = {student: random.randint(1, 100) for student in names}
+# print(scores)
+#
+# passed_students = {student: score for (student, score) in scores.items() if score >= 60}
+# print(passed_students)
 
-names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
-scores = {student: random.randint(1, 100) for student in names}
-print(scores)
-
-passed_students = {student: score for (student, score) in scores.items() if score >= 60}
-print(passed_students)
+# Dictionary Comprehension Coding Challenge 1
+# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# # Don't change code above 👆
+# result = {word: len(word) for word in sentence.split()}
+# # Write your code below:
+#
+# print(result)
 
